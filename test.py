@@ -1,4 +1,5 @@
 import unittest
+from fractions import Fraction
 
 from my_sum import sum
 
@@ -13,6 +14,11 @@ class TestSum(unittest.TestCase):
         result = sum(data)
         self.assertEqual(result, 6)
         print('Chyba się udało!')
+
+    def test_list_fraction(self):
+        data = [Fraction(1, 4), Fraction(1, 4), Fraction(2, 5)]
+        result = sum(data)
+        self.assertEqual(result, 1)
 
 
 if __name__ == 'main':
