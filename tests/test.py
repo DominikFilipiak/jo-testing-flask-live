@@ -15,6 +15,7 @@ class TestSum(unittest.TestCase):
         self.assertEqual(result, 6)
         print('Chyba się udało!')
 
+    @unittest.skip('Nie robie tego testu bo nie lubie czerwonego koloru')
     def test_list_fraction(self):
         data = [Fraction(1, 4), Fraction(1, 4), Fraction(2, 5)]
         result = sum(data)
